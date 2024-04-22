@@ -1,7 +1,7 @@
-import Header from "./Header.jsx";
-import Nav from "./Nav.jsx";
-import Profile from "./Profile.jsx";
-import Footer from "./Footer.jsx";
+import Header from "./Header/Header.jsx";
+import Nav from "./Nav/Nav.jsx";
+import Profile from "./Profile/Profile.jsx";
+import Footer from "./Footer/Footer.jsx";
 
 import './App.css';
 
