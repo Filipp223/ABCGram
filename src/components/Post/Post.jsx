@@ -1,11 +1,14 @@
 import profileImg from "../../img/Gyllenhaal.webp";
+import styles from "./Post.module.css";
 
-function Post() {
+console.log(styles);
+
+function Post(props) {
     return (
-        <li className="post">
-            <img className="profileImage" src={profileImg} alt="Jake Gyllenhaal" width="100"/>
-            <h3 className="author">Jake Gyllenhaal</h3>
-            <p className="text">3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ullam praesentium distinctio? Impedit aspernatur placeat hic iure voluptatum dolor officiis est adipisci magni mollitia incidunt, ab nostrum odio magnam omnis!</p>
+        <li className={styles.post}>
+            <img className="profileImage" src={props.image} alt={props.userName} width="100"/>
+            <h3 className={styles.author}>{props.userName}</h3>
+            <p className="text">{props.postText}</p>
         </li>
     );
 }
