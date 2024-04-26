@@ -5,7 +5,7 @@ import "./Profile.css";
 function Profile() {
     return (
         <section className="profile">
-            <img src={gyllenhaal} alt="Jake Gyllenhaal"/>
+            <img className="profile__img" src={gyllenhaal} alt="Jake Gyllenhaal"/>
             Name: Jake Gyllenhaal
 
             <Posts/>

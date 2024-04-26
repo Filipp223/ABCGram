@@ -1,3 +1,18 @@
 .header {
     grid-area: header;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    height: 100%;
+    margin-left: 50px;
+}
+
+.header__title {
+    font-size: 120px;
+    line-height: 120px;
+    margin-left: 30px;
+    color: rgb(123, 128, 207);
+    letter-spacing: 3px;
 }

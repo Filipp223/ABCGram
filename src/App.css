@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    color: #FFF;
+}
+
 #root {
     display: grid;
     grid-template-columns: 8fr 2fr;
@@ -13,5 +18,11 @@
 }
 
 #root > * {
-    background-color: aquamarine;
+    background-color: #272727;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+body {
+    background-color: #151515;
 }

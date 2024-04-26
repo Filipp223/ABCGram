@@ -1,3 +1,13 @@
 .footer {
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__section {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
