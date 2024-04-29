@@ -1,0 +1,15 @@
+.dialogue {
+    border: 3px solid #253a28;
+    border-radius: 10px;
+    padding: 10px 10px 10px 30px;
+    margin: 10px 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.author {
+    margin: 25px 0px 0px 15px;
+    font-size: 30px;
+
+}
