@@ -1,12 +1,12 @@
-import "./Nav.css";
+import styles from "./Nav.module.css";
 import {NavLink} from "react-router-dom";
 
 function Nav() {
     return (
-        <nav className="nav">
-            <NavLink className="link" to="/">Profile</NavLink>
-            <NavLink className="link" to="/messages">Messages</NavLink>
-            <NavLink className="link" to="/users">Users</NavLink>
+        <nav className={styles.nav}>
+            <NavLink className={styles.link} to="/">Profile</NavLink>
+            <NavLink className={styles.link} to="/messages">Messages</NavLink>
+            <NavLink className={styles.link} to="/users">Users</NavLink>
         </nav>
     );
 }
