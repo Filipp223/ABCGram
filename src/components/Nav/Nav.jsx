@@ -7,6 +7,7 @@ function Nav() {
             <NavLink className={styles.link} to="/">Profile</NavLink>
             <NavLink className={styles.link} to="/messages">Messages</NavLink>
             <NavLink className={styles.link} to="/users">Users</NavLink>
+            <NavLink className={styles.link} to="/feed">Feed</NavLink>
         </nav>
     );
 }
