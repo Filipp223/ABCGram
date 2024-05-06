@@ -1,6 +1,18 @@
 import Dialogue from "../Dialogue/Dialogue";
 import "./Dialogues.css";
 
+const dialogueArray = [
+    {
+        userName: "Michael Smith",
+        message: "Lorem, ipsum dolor sit amet consectetur adipisicing elit???",
+    },
+
+    {
+        userName: "Jake Gyllenhaal",
+        message: "Ullam nulla fuga laudantium",
+    },
+]
+
 function Dialogues() {
     return (
         <div className="dialogues">
@@ -8,7 +20,9 @@ function Dialogues() {
             <textarea className="textarea" placeholder="Ask questions!"/>
             <button className="button">Send</button>
             <ul className="list">
-                <Dialogue userName="Michael Smith" postText="Lorem, ipsum dolor sit amet consectetur adipisicing elit???" userNamePage="Jake Gyllenhaal" postTextPage="Ullam nulla fuga laudantium"/>
+                {dialogueArray.map((dialogue, i) => {
+                    return <Dialogue userName={dialogue.userName} message={dialogue.message}/>;
+                })}
             </ul>
         </div>
     );

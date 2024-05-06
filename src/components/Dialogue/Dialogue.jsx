@@ -1,12 +1,10 @@
 import "./Dialogue.css"
 
-function Dialogue(props) {
+function Dialogue({userName, message}) {
     return (
         <li className="dialogue">
-            <h3 className="author">{props.userName}</h3>
-            <p className="text">{props.postText}</p>
-            <h3 className="author">{props.userNamePage}</h3>
-            <p className="text">{props.postTextPage}</p>
+            <h3 className="author">{userName}</h3>
+            <p className="text">{message}</p>
         </li>
     );
 }

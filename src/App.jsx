@@ -10,6 +10,27 @@ import {Routes, Route} from "react-router-dom";
 import './App.css';
 
 function App() {
+  // const obj = {
+  //   surname: "Smith",
+  //   name: "Kyle",
+  //   age: 27,
+  // }
+  // const {name, age} = obj;
+  // console.log(name, age);
+
+  // const numArray = [1, 2, 3, 4, 5];
+  // const [num1, num2] = numArray;
+
+  // const newArray = numArray.map((num, i) => {
+  //   return num*10;
+  // })
+
+  // const newArray = [];
+  // numArray.forEach((num, i) => {
+  //   newArray.push(num * 10);
+  // })
+  // console.log(newArray);
+
   return (
     <>
       <Header/>
