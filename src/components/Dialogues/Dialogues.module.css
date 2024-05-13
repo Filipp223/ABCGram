@@ -1,11 +1,8 @@
-.posts h2 {
-    
-}
-
-.posts textarea {
+.dialogues textarea {
     margin-left: 20px;
-    width: calc(100% - 20px);
-    min-height: 150px;
+    width: calc(100% - 110px);
+    min-height: 48px;
+    height: 48px;
     font-size: 22px;
     background-color: #151515;
     border-radius: 10px;
@@ -13,11 +10,14 @@
     resize: vertical;
 }
 
-.posts button {
+.dialogues button {
     margin-left: 20px;
     background-color: #151515;
     border: 1px solid rgb(119, 119, 119);
-    padding: 5px 15px;
     font-size: 16px;
     border-radius: 10px;
+    height: 48px;
+    width: 70px;
+    position: relative;
+    top: -19px;
 }

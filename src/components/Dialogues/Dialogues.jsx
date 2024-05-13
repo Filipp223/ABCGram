@@ -1,5 +1,5 @@
 import Dialogue from "../Dialogue/Dialogue";
-import "./Dialogues.css";
+import styles from "./Dialogues.module.css";
 
 const dialogueArray = [
     {
@@ -15,7 +15,7 @@ const dialogueArray = [
 
 function Dialogues() {
     return (
-        <div className="dialogues">
+        <div className={styles.dialogues}>
             <h2 className="title">Dialogues</h2>
             <textarea className="textarea" placeholder="Ask questions!"/>
             <button className="button">Send</button>
