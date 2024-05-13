@@ -23,7 +23,18 @@ const data = {
         }
       ],
 
-    dialogueArray: "",
+    
+    dialogueArray: [
+        {
+            userName: "Michael Smith",
+            message: "Lorem, ipsum dolor sit amet consectetur adipisicing elit???",
+        },
+
+        {
+            userName: "Jake Gyllenhaal",
+            message: "Ullam nulla fuga laudantium",
+        },
+    ],
 }
 
 export default data;

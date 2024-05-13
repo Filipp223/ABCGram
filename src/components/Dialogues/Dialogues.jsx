@@ -1,19 +1,7 @@
 import Dialogue from "../Dialogue/Dialogue";
 import styles from "./Dialogues.module.css";
 
-const dialogueArray = [
-    {
-        userName: "Michael Smith",
-        message: "Lorem, ipsum dolor sit amet consectetur adipisicing elit???",
-    },
-
-    {
-        userName: "Jake Gyllenhaal",
-        message: "Ullam nulla fuga laudantium",
-    },
-]
-
-function Dialogues() {
+function Dialogues({dialogueArray}) {
     return (
         <div className={styles.dialogues}>
             <h2 className="title">Dialogues</h2>
