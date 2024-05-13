@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
+import data from "./data/data.js";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App/>
+      <App postArray={data.postArray} dialogueArray={data.dialogueArray}/>
     </BrowserRouter>
   </React.StrictMode>
 );
