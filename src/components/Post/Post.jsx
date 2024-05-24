@@ -7,7 +7,7 @@ function Post({image, userName, postText}) {
         <li className={styles.post}>
             <img className="profileImage" src={image} alt={userName} width="100"/>
             <h3 className={styles.author}>{userName}</h3>
-            <p className="text">{postText}</p>
+            <p className={styles.text}>{postText}</p>
         </li>
     );
 }
