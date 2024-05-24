@@ -5,12 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import data from "./data/data.js";
+const getState = data.getState.bind(data);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App postArray={data.postArray} dialogueArray={data.dialogueArray}/>
+      <App postArray={getState().postArray} dialogueArray={getState().dialogueArray} addMessage={data.addMessage.bind(data)}/>
     </BrowserRouter>
   </React.StrictMode>
 );

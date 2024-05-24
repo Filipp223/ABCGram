@@ -9,7 +9,7 @@ import {Routes, Route} from "react-router-dom";
 
 import './App.css';
 
-function App({postArray, dialogueArray}) {
+function App({postArray, dialogueArray, addMessage}) {
   // const obj = {
   //   surname: "Smith",
   //   name: "Kyle",
@@ -38,7 +38,7 @@ function App({postArray, dialogueArray}) {
       <Nav/>
 
       <Routes>
-        <Route path="/" element={<Profile postArray={postArray}/>}/>
+        <Route path="/" element={<Profile postArray={postArray} addMessage={addMessage}/>}/>
         <Route path="/messages" element={<Dialogues dialogueArray={dialogueArray}/>}/>
         <Route path="/users" element={<Users/>}/>
         <Route path="/feed" element={<Feed/>}/>
