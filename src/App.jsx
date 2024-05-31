@@ -9,7 +9,7 @@ import {Routes, Route} from "react-router-dom";
 
 import './App.css';
 
-function App({postArray, dialogueArray, addMessage}) {
+function App({postArray, dialogueArray, dispatch, addDialogue}) {
   // const obj = {
   //   surname: "Smith",
   //   name: "Kyle",
@@ -38,8 +38,8 @@ function App({postArray, dialogueArray, addMessage}) {
       <Nav/>
 
       <Routes>
-        <Route path="/" element={<Profile postArray={postArray} addMessage={addMessage}/>}/>
-        <Route path="/messages" element={<Dialogues dialogueArray={dialogueArray}/>}/>
+        <Route path="/" element={<Profile postArray={postArray} dispatch={dispatch}/>}/>
+        <Route path="/messages" element={<Dialogues dialogueArray={dialogueArray} dispatch={dispatch}/>}/>
         <Route path="/users" element={<Users/>}/>
         <Route path="/feed" element={<Feed/>}/>
       </Routes>

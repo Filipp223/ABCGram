@@ -3,6 +3,11 @@ import profileImg2 from "../img/aaronpaul.jpg";
 import profileImg3 from "../img/jeffbezos.jpg";
 import anonymousProfile from "../img/anonymous.png";
 
+export const ACTIONS = {
+    ADD_MESSAGE: "ADD_MESSAGE",
+    ADD_DIALOGUE: "ADD_DIALOGUE",
+}
+
 const data = {
     _state: {
         postArray: [
@@ -31,11 +36,13 @@ const data = {
         
         dialogueArray: [
             {
+                id: 213,
                 userName: "Michael Smith",
                 message: "Lorem, ipsum dolor sit amet consectetur adipisicing elit???",
             },
     
             {
+                id: 214,
                 userName: "Jake Gyllenhaal",
                 message: "Ullam nulla fuga laudantium",
             },
@@ -46,10 +53,16 @@ const data = {
         return {...this._state};
     },
 
-    addMessage: function (postText) {
-        const lastID = this._state.postArray[this._state.postArray.length - 1].id; 
-        this._state.postArray.push({id: lastID + 1, image: anonymousProfile, userName: "Anonymous", postText: postText})
-        console.log(this._state);
+    dispatch: function (action) {
+        if (action.type === ACTIONS.ADD_MESSAGE) {
+            const lastID = this._state.postArray[this._state.postArray.length - 1].id; 
+            this._state.postArray.push({id: lastID + 1, image: anonymousProfile, userName: "Anonymous", postText: action.payload.postText})
+        }
+
+        if (action.type === ACTIONS.ADD_DIALOGUE) {
+            const lastID = this._state.dialogueArray[this._state.dialogueArray.length - 1].id;
+            this._state.dialogueArray.push({id: lastID + 1, userName: action.payload.userName, message: action.payload.message})
+        }
     },
 
 }

@@ -1,16 +1,20 @@
 import styles from "./Posts.module.css";
 import Post from "../Post/Post.jsx";
 import {useRef, useState} from "react";
+import { ACTIONS } from "../../data/data.js";
 
-function Posts({postArray, addMessage}) {
+function Posts({postArray, dispatch}) {
     const [number, setNumber] = useState(0);
-    console.log(number);
+    // console.log(number);
 
     const [text, setText] = useState("");
 
     const inputRef = useRef();
     function add() {
-        addMessage(text);
+        dispatch({
+            type: ACTIONS.ADD_MESSAGE,
+            payload: {postText: text},
+        });
         setText("");
     }
     return (

@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App postArray={getState().postArray} dialogueArray={getState().dialogueArray} addMessage={data.addMessage.bind(data)}/>
+      <App postArray={getState().postArray} dialogueArray={getState().dialogueArray} dispatch={data.dispatch.bind(data)}/>
     </BrowserRouter>
   </React.StrictMode>
 );
