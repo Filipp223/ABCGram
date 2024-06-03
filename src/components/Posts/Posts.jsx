@@ -2,8 +2,14 @@ import styles from "./Posts.module.css";
 import Post from "../Post/Post.jsx";
 import {useRef, useState} from "react";
 import { ACTIONS } from "../../data/data.js";
+import { useSelector, useDispatch } from "react-redux";
 
-function Posts({postArray, dispatch}) {
+function Posts() {
+    const dispatch = useDispatch();
+    const postArray = useSelector((state) => {
+        return state.postArray;
+    })
+
     const [number, setNumber] = useState(0);
     // console.log(number);
 
@@ -15,7 +21,7 @@ function Posts({postArray, dispatch}) {
             type: ACTIONS.ADD_MESSAGE,
             payload: {postText: text},
         });
-        setText("");
+        // setText("");
     }
     return (
         <div className={styles.posts}>

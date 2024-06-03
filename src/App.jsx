@@ -9,7 +9,7 @@ import {Routes, Route} from "react-router-dom";
 
 import './App.css';
 
-function App({postArray, dialogueArray, dispatch, addDialogue}) {
+function App({postArray, dialogueArray, dispatch}) {
   // const obj = {
   //   surname: "Smith",
   //   name: "Kyle",

@@ -54,11 +54,6 @@ const data = {
     },
 
     dispatch: function (action) {
-        if (action.type === ACTIONS.ADD_MESSAGE) {
-            const lastID = this._state.postArray[this._state.postArray.length - 1].id; 
-            this._state.postArray.push({id: lastID + 1, image: anonymousProfile, userName: "Anonymous", postText: action.payload.postText})
-        }
-
         if (action.type === ACTIONS.ADD_DIALOGUE) {
             const lastID = this._state.dialogueArray[this._state.dialogueArray.length - 1].id;
             this._state.dialogueArray.push({id: lastID + 1, userName: action.payload.userName, message: action.payload.message})
