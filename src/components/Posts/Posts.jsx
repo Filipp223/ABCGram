@@ -1,7 +1,7 @@
 import styles from "./Posts.module.css";
 import Post from "../Post/Post.jsx";
 import {useRef, useState} from "react";
-import { ACTIONS } from "../../data/data.js";
+import { ACTIONS } from "../../data/store.js";
 import { useSelector, useDispatch } from "react-redux";
 
 function Posts() {

@@ -1,9 +1,15 @@
-import { ACTIONS } from "../../data/data";
 import Dialogue from "../Dialogue/Dialogue";
 import styles from "./Dialogues.module.css";
 import {useRef, useState} from "react";
+import { ACTIONS } from "../../data/store";
+import { useSelector, useDispatch} from "react-redux";
 
-function Dialogues({dialogueArray, dispatch}) {
+function Dialogues() {
+    const dispatch = useDispatch();
+    const dialogueArray = useSelector((state) => {
+        return state.dialogueArray;
+    })
+
     const [text, setText] = useState("");
     const inputRef = useRef();
 

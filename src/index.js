@@ -4,17 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import data from "./data/data.js";
 import { Provider } from "react-redux";
 import store from "./data/store.js";
-const getState = data.getState.bind(data);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <App postArray={getState().postArray} dialogueArray={getState().dialogueArray} dispatch={data.dispatch.bind(data)}/>
+        <App/>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
